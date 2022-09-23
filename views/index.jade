@@ -1,0 +1,26 @@
+extends layout
+
+block content
+    h1 💩 PoopWeb
+
+    if results
+        h2 Results
+        div(style='padding-left:2em;') 
+            h3 Input
+            p=  results.input
+
+            if results.output
+                h3 Output
+                p(style='white-space: pre-line;')= results.output
+
+        h2(style='padding-top:1em;') Try another one
+
+
+    form(method="POST", action="/")
+        p(style='padding-left:2em;')
+            | Input:
+            input(type="text", name="args") 
+            input(type="submit")
+
+    h2(style='padding-top:2em;') Acknowledgments
+    p ...        
