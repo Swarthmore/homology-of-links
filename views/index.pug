@@ -1,11 +1,11 @@
 extends layout
 
 block content
-    h1 💩 PoopWeb
+    h1 🔗 Homology of Links
 
     if results
         h2 Results
-        div(style='padding-left:2em;') 
+        div(style='padding-left:2em;')
             h3 Input
             p=  results.input
 
@@ -19,8 +19,12 @@ block content
     form(method="POST", action="/")
         p(style='padding-left:2em;')
             | Input:
-            input(type="text", name="args") 
+            input(type="text", name="args")
             input(type="submit")
 
     h2(style='padding-top:2em;') Acknowledgments
-    p ...        
+    ul
+        li Algorithm interpretation - Krzysztof Galicki, University of New Mexico 
+        li Programming - Evan Thomas
+        li Programming - Andrew Reuther 
+        li Programming - Anthony Weed
