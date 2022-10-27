@@ -23,11 +23,11 @@ block content
             input(type="submit")
 
     h2(style='padding-top:2em;') Explanation
-    p Let \( L_f \) be a link of an isolated hypersurface singularity defined by a quasi-homogeneous polynomial f of degree d with weights \( \left(w_0, \cdots, w_n\right) \). The free part of \( H_{n-1}\left(L_f, Z\right) \), i.e., the Betti number \( b_{n-1}\left(L_f\right) \) can be computed using the weights and the degree following the algorithm described in [1]. The torsion in the homology of the link was conjectured by Orlik [2] to be of the form: $$H_{n-1}\left(L_f, Z\right)_{\text {torsion }}=Z_{d_1} \oplus Z_{d_2} \cdots Z_{d_r}$$
+    p Let \( L_f \) be a link of an isolated hypersurface singularity defined by a quasi-homogeneous polynomial f of degree d with weights \( \left(w_0, \cdots, w_n\right) \). The free part of \( H_{n-1}\left(L_f, \mathbb{Z}\right) \), i.e., the Betti number \( b_{n-1}\left(L_f\right) \) can be computed using the weights and the degree following the algorithm described in [1]. The torsion in the homology of the link was conjectured by Orlik [2] to be of the form: $$H_{n-1}\left(L_f, \mathbb{Z}\right)_{\text {torsion }}=\mathbb{Z}_{d_1} \oplus \mathbb{Z}_{d_2} \cdots \mathbb{Z}_{d_r}$$
 
     p where the \( \mathrm{d}_{\mathrm{i}} \) are computed using a combinatorial procedure involving the degree and the weights of f and this is described in [2]. The full conjecture is still open. This program allows one to input the degree followed by the weights to determine, according to the conjecture, what the homology of the link should be. For example, consider the quasi-homogenous polynomial of degree 12: $$ f\left(x_0 x_1, x_2, x_3, x_4\right)=x_0^2+x_1^3+x_2^3+x_3^4+x_4^6 $$
 
-    p Now if we input 12 6 4 4 3 2 then the output will be kappa=2, (third Betti number) d_1=12, d_2=4, d_3=2, d_4=2. Hence \( H_3\left(L_f, Z\right)=Z^2 \oplus Z_{12} \oplus Z_4 \oplus\left(Z_2\right)^2 \).
+    p Now if we input 12 6 4 4 3 2 then the output will be kappa=2, (third Betti number) d_1=12, d_2=4, d_3=2, d_4=2. Hence \( H_3\left(L_f, Z\right)=\mathbb{Z}^2 \oplus \mathbb{Z}_{12} \oplus \mathbb{Z}_4 \oplus\left(\mathbb{Z}_2\right)^2 \).
 
     p [1] Milnor, J. and Orlik, P. 
         i Isolated Singularities Defined by Weighted Homogeneous Polynomials, 
