@@ -1,7 +1,7 @@
 extends layout
 
 block content
-    h1.mb-4 Homology of Links
+    h1.mb-4 🔗 Homology of Links
 
     if results
         h2 Results
@@ -16,11 +16,13 @@ block content
         h2 Try another one
 
     .my-4.card
-        .card-body
-            form(method="POST", action="/")
-                label(for='args-input', class='form-label') Input
-                input(type='text', class='form-control form-control-lg mb-1', id='args-input')
-                button(type='submit', class='btn btn-primary') Submit
+        .card
+            .card-body
+                h5.card-title Input
+                form.row(method="POST", action="/")
+                    .card-text
+                        input(type='text', class='form-control form-control-lg mb-1', id='args-input')
+                        button(type='submit', class='btn btn-primary') Submit
 
     .my-4
         include ../blocks/explanation.pug
