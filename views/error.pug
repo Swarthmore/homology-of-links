@@ -1,10 +1,6 @@
 extends layout
 
 block content
-
-    h1 🎉 #{message}
-     h2= error.status
-
+    h1 <span class='text-danger'>⚠</span> Error
+    div(class='text-bg-danger p-3') #{message}
     a(href="/") Try again
-
-
