@@ -8,7 +8,11 @@ router.get('/', function(req, res, next) {
   res.render('index', {});
 });
 
+// Render error to browser
+const renderError = (error) => res.render('error', {message:"System error", error: {status:""}});
+
 router.post('/', function(req, res, next) {
+
 
     // Remove anything that ins't a digit or a space
     input = req.body.args.replace(/[^0-9\s]/g, "");
@@ -17,10 +21,12 @@ router.post('/', function(req, res, next) {
         res.render('index', {results: {input:"No input provided", output:""}});
     } else {
         exec(`./bin/poop ${input}` , (error, stdout, stderr) => {
-            if (error || stderr) {
+            if (error) {
                 console.log(error);
+                renderError(error)
+            } else if (stderr) {
                 console.log(stderr);
-                res.render('error', {message:"System error", error: {status:""}});
+                renderError(stderr)
             } else {
                 res.render('index', {results: {input:input, output:stdout}});
             }
